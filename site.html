@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E-Finances</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="images/Efinance.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <img class="title-img" src="images/Efinance-simple.png">
+      <h2 class="title">E-FINANCES</h2>
+      <p class="about">Sobre</p>
+    </header>
+    
+  <main class="container">
+
+    
+<div title="filtrar tudo" class="div-saldo">
+  <h2 id= 'saldo' class="saldo">Saldo total</h2>
+  <p id="saldo-total" class="saldo-total">R$0,00</p>
+</div>
+
+<div class="div-receita-despesa">
+
+  <div class="despesa-card">
+    <h2 title="filtrar por despesas" id="despesas" class="despesas">Despesas</h2>
+    <p id="valor-despesas" class="valor-despesas">R$ 0,00</p>
+  </div>
+
+  <div class="receita-card">
+    <h2 title="filtrar por receitas" id="receitas" class="receitas">Receitas</h2>
+    <p id="valor-receitas" class="valor-receitas">R$ 0,00</p>
+  </div>
+</div>
+
+<button class="transacao">+ Nova transação</button>
+
+<div class="transacoes-card">
+  <input placeholder="Pesquisar transações" id="pesquisar" type="text">
+  <h2 class="transacoes">Histórico de transações</h2>
+  <button class="apagarTudo">Apagar tudo</button>
+  <ul class="transacoes-historico"></ul>
+</div>  
+
+ <div class="sobre-card">
+  <button class="fechar">FECHAR</button>
+  <h3>E-FINANCES é uma plataforma de controle financeiro pessoal criada para ajudar você a organizar suas receitas, despesas e acompanhar sua situação financeira de forma simples e intuitiva. Com ela, você pode registrar transações, visualizar seu saldo total e manter um histórico completo dos seus movimentos financeiros.</h3>
+
+  <img class="logo-sobre" src="images/efinances.png">
+ </div>
+
+ <div class="nova-transacao">
+  <button class="fechar-transacao">FECHAR</button>
+
+  <h2>Nova Transação</h2>
+
+  <form id="form-transacao">
+
+    <label>Descrição</label>
+    <input type="text" id="descricao" placeholder="Ex: viagem" required>
+
+    <select id="categoria" required>
+      <option value="">Selecione uma categoria</option>
+      <option value="Alimentação">🍔 Alimentação</option>
+      <option value="Transporte">🚗 Transporte</option>
+      <option value="Lazer">🎮 Lazer</option>
+      <option value="Saúde">🏥 Saúde</option>
+      <option value="Moradia">🏠 Moradia</option>
+      <option value="Trabalho">💼 Trabalho</option>
+      <option value="Outros">📌 Outros</option>
+    </select>
+
+    <label>Valor</label>
+    <input type="text" id="valor" placeholder="R$ 0,00" required>
+
+    <input id="data" type="date" required>
+
+    <label>Tipo</label>
+
+    <div class="tipo-transacao">
+      <label>
+        <input type="radio" name="tipo" value="receita" required>
+        Receita
+      </label>
+
+      <label>
+        <input type="radio" name="tipo" value="despesa">
+        Despesa
+      </label>
+    </div>
+
+    <button class="add" type="submit">
+      Adicionar
+    </button>
+
+  </form>
+</div>
+  </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

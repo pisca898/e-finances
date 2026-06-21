@@ -1,0 +1,381 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 90px auto 0;
+  padding: 20px;
+}
+
+/* ================================================================================= */
+
+header {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #00bf63;
+
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.title-img {
+  height: 45px;
+}
+
+.title {
+  margin-left: 15px;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+.about {
+  margin-left: auto;
+  color: white;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+.about:hover {
+  color: rgb(200, 200, 200);
+}
+
+/* ================================================================================= */
+
+
+.div-saldo{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.div-saldo h2 {
+  font-family: "Lexend Exa", sans-serif;
+}
+
+.saldo-total {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  color: #00bf63;
+}
+
+.saldo{
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.saldo:hover{
+  color: rgb(73, 238, 82);
+  transition: 0.2s;
+}
+
+/* ================================================================================= */
+
+
+.div-receita-despesa {
+  justify-content: center;
+  display: flex;
+  gap: 100px;
+  margin-top: 50px;
+  font-family: "Lexend Exa", sans-serif;
+  
+}
+
+.valor-receitas,
+.valor-despesas {
+  margin-top: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+
+.valor-receitas {
+  color: #00bf63;
+}
+
+.valor-despesas {
+  color: #bf0000;
+}
+
+.receitas{
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.receitas:hover{
+color:  rgb(73, 238, 82);
+  transition: 0.2s;
+}
+
+.despesas{
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.despesas:hover{
+color:  rgb(73, 238, 82);
+  transition: 0.2s;
+}
+/* ================================================================================= */
+
+.transacao{
+  display: block;
+  margin: 30px auto 0;
+  margin-top: 30px;
+  border: none;
+  height: 30px;
+  width: 150px;
+  padding: 5px;
+  background-color: #04c568;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.transacao:hover{
+  background-color: #00924b;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.transacoes-card{
+  text-align: center;
+  margin-top: 25px;
+}
+
+.transacoes{
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+#pesquisar{
+  padding: 10px;
+  width: 200px;
+  border: none;
+  background-color: rgba(104, 104, 104, 0.466);
+  border-radius: 30px;
+}
+
+.apagarTudo{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #bf0000;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.apagarTudo:hover{
+  background-color: #e22727;
+  transition: 0.2s;
+  transform: scale(1.01);
+}
+
+.apagarEsconder{
+  display: none;
+}
+/*================================================================================================*/
+
+.sobre-card{
+  display: none;
+  position: fixed;
+  top: 110px;
+  width: 60%;
+  height: 60%;
+  background-color: #00bf63;
+  z-index: 10;
+  border-radius: 30px;
+  padding: 30px;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+.sobre-card-show{
+  display: block;
+}
+
+.sobre-card h3{
+  margin-top: 50px;
+}
+
+.fechar{
+  background-color: #bf0000;
+  border: none;
+  padding: 8px;
+  border-radius: 60px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.1s;
+}
+
+.fechar:hover{
+ background-color: #7e0101;
+ transform: scale(1.05);
+ transition: 0.1s;
+}
+
+.logo-sobre{
+  margin-left: 40%;
+ height: 150px;
+}
+
+/*==================================================================================================*/
+
+.nova-transacao {
+  display: none;
+  height: 550px;
+  width: 500px;
+  background-color: rgb(124, 255, 131);
+  padding: 25px;
+  border-radius: 20px;
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 10;
+  font-family: "Inter", sans-serif;
+}
+
+.nova-transacao h2{
+  margin-top: 30px;
+}
+
+#form-transacao {
+  margin-top: 50px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#form-transacao input[type="text"],
+#form-transacao input[type="number"] {
+  height: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+}
+
+.tipo-transacao {
+  display: flex;
+  gap: 20px;
+}
+
+.tipo-transacao label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#form-transacao button {
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  background-color: #0059bf;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+  font-family: "Inter", sans-serif;
+}
+
+#form-transacao button:hover {
+  background-color: #00189e;
+  transition: 0.2s;
+  transform: scale(1.03);
+}
+
+.fechar-transacao{
+  background-color: #bf0000;
+  border: none;
+  padding: 8px;
+  border-radius: 60px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.1s;
+}
+
+.fechar-transacao:hover{
+ background-color: #7e0101;
+ transform: scale(1.05);
+ transition: 0.1s;
+}
+
+.mostrar-transacao{
+  display: block;
+}
+
+ul{
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #0059bf;
+}
+
+.apagar-li{
+  border-radius: 100px;
+  border: none;
+  padding: 5px;
+  color: black ;
+  background-color: #bf0000;
+  margin-left: 13px;
+}
+
+.apagar-li:hover{
+  background-color: #7e0101;
+}
+
+/*========================================================================================*/
+
+#categoria{
+  border: none;
+  padding: 4px;
+  border-radius: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#categoria:hover{
+  transition: 0.2s;
+  background-color: rgba(255, 255, 255, 0.445);
+}
+
+option{
+  background-color: rgba(0, 255, 98, 0.432);
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
